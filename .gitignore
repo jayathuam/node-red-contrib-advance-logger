@@ -1,0 +1,6 @@
+/.sonar
+/.idea
+coverage
+node_modules
+/sonar-project.properties
+dist
