@@ -29,16 +29,16 @@
                 required: true
             },
             console: {
-                value: ""
+                value: false
             },
             file: {
-                value: ""
+                value: false
             },
             debug: {
-                value: ""
+                value: false
             },
             zip: {
-                value: ""
+                value: false
             },
             logtype: {
                 value: "info",
@@ -95,8 +95,7 @@
                 }
             });
 
-            $("#node-input-logtype").on("change", function() {
-                console.log($("#node-input-logtype").val());
+            $("#node-input-logtype").on("change", function() {               
                 if ($("#node-input-logtype").val() === 'info') {
                     $("#completerow").show();
                 } else {

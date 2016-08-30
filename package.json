@@ -1,12 +1,17 @@
 {
   "name": "node-red-contrib-advance-logger",
-  "version": "1.0.0",
-  "description": "Advance logger for Node-Red",  
+  "version": "1.0.1",
+  "description": "Advance logger for Node-Red",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jayathuam/node-red-contrib-advance-logger"
+  },
   "keywords": [
-    "node-red-winston-contribute",
+    "file logger",
+    "winston",
     "node-red"
   ],
   "node-red": {
@@ -15,7 +20,7 @@
     }
   },
   "author": "Jayathu Amarasinghe",
-  "license": "ISC",
+  "license": "MIT",
   "dependencies": {
     "winston": "2.2.0"
   }
