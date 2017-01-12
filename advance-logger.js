@@ -1,4 +1,5 @@
-module.exports = function (RED) {
+module.exports = function (RED) {  
+    "use strict";  
     var debuglength = RED.settings.debugMaxLength || 1000;
     var util = require("util");
     var events = require("events");

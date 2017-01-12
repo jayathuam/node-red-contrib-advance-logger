@@ -23,5 +23,8 @@
   "license": "MIT",
   "dependencies": {
     "winston": "2.2.0"
+  },
+  "devDependencies": {
+    "jshint": "^2.9.4"
   }
 }
