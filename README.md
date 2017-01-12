@@ -1,6 +1,6 @@
 # node-red-contrib-advance-logger
 
-[![Build status][travis-image]][travis-url] [![NPM version][npm-image]][npm-url] [![XO code style][codestyle-image]][codestyle-url]
+[![Build status][travis-image]][travis-url] [![NPM version][npm-image]][npm-url]
 
 > A Node-RED Logging node.
 
@@ -46,9 +46,7 @@ The node icon is the [readability](https://materialdesignicons.com/icon/readabil
 
 MIT © `Jayathu Amarasinghe`
 
-[npm-url]: https://npmjs.org/package/node-red-contrib-readability
-[npm-image]: https://badge.fury.io/js/node-red-contrib-readability.svg
-[travis-url]: https://travis-ci.org/joakimbeng/node-red-contrib-readability
-[travis-image]: https://travis-ci.org/joakimbeng/node-red-contrib-readability.svg?branch=master
-[codestyle-url]: https://github.com/sindresorhus/xo
-[codestyle-image]: https://img.shields.io/badge/code%20style-XO-5ed9c7.svg?style=flat
+[npm-url]: https://www.npmjs.com/package/node-red-contrib-advance-logger
+[npm-image]: https://badge.fury.io/js/node-red-contrib-advance-logger.svg
+[travis-url]: https://travis-ci.org/jayathuam/node-red-contrib-advance-logger
+[travis-image]: https://travis-ci.org/jayathuam/node-red-contrib-advance-logger.svg?branch=master
