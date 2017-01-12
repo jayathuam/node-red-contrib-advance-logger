@@ -35,8 +35,8 @@ Any attribute in the payload JSON can be use as the info type logging.
 
 The input payload JSON should have following properties for warning and error logging.
 
-* `warn` – warning loggings
-* `error` – error loggings
+* `warn` – warning logging
+* `error` – error logging
 
 ## Icon credit
 
