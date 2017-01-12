@@ -31,9 +31,9 @@ To use the node, launch Node-RED (see [running Node-RED](http://nodered.org/docs
 
 The input payload should be JSON. 
 
-Any attribute in the payload JSON can be use as the info type loggings.
+Any attribute in the payload JSON can be use as the info type logging.
 
-The output payload JSON should have following properties for warning and error loggings.
+The input payload JSON should have following properties for warning and error logging.
 
 * `warn` – warning loggings
 * `error` – error loggings
