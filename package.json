@@ -3,8 +3,7 @@
   "version": "1.0.1",
   "description": "Advance logger for Node-Red",
   "main": "advance-logger.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+  "scripts": {    
     "release": "standard-version"
   },
   "repository": {
