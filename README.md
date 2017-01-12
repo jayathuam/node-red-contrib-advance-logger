@@ -8,7 +8,7 @@
 
 Advance Logger depend on the file logging library called [`Winston`](https://www.npmjs.com/package/winston). 
 
-Advance Logger goal is to be a simple logger for Node-Red.
+Goal of Advance Logger is to be a simple logger for Node-Red.
 
 ## Installation
 
