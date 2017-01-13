@@ -1,6 +1,6 @@
 # node-red-contrib-advance-logger
 
-[![Build status][travis-image]][travis-url] [![NPM version][npm-image]][npm-url]
+[![Build status][travis-image]][travis-url] [![NPM version][npm-image]][npm-url] [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 > A Node-RED Logging node.
 
