@@ -1,15 +1,15 @@
 {
-  "name": "node-red-contrib-advance-logger",
-  "version": "1.0.2",
-  "description": "Advance logger for Node-Red",
-  "main": "advance-logger.js",
-  "scripts": {    
+  "name": "node-red-contrib-rotate-logger",
+  "version": "0.0.1",
+  "description": "Date patterned rotate logger for Node-Red",
+  "main": "rotate-logger.js",
+  "scripts": {
     "release": "standard-version"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/jayathuam/node-red-contrib-advance-logger"
-  },  
+    "url": "https://github.com/airkjh/node-red-contrib-advance-logger"
+  },
   "keywords": [
     "file logger",
     "winston",
@@ -17,13 +17,14 @@
   ],
   "node-red": {
     "nodes": {
-      "node-red-contrib-logger": "advance-logger.js"
+      "node-red-contrib-logger": "rotate-logger.js"
     }
   },
-  "author": "Jayathu Amarasinghe",
+  "author": "JaeHyuk Kim",
   "license": "MIT",
   "dependencies": {
-    "winston": "2.2.0"
+    "winston": "2.2.0",
+    "winston-daily-rotate-file": "^1.7.2"
   },
   "devDependencies": {
     "jshint": "^2.9.4",

@@ -1,0 +1,133 @@
+<script type="text/javascript">
+  RED.nodes.registerType('rotate-logger', {
+    category: 'output',
+    color: '#B2EBF2',
+    defaults: {
+      name: {
+        value: ""
+      },
+      filename: {
+        value: "node-red.log",
+        required: true
+      },
+      complete: {
+        value: "false",
+        required: true
+      },
+      console: {
+        value: false
+      },
+      file: {
+        value: false
+      },
+      debug: {
+        value: false
+      },
+      zip: {
+        value: false
+      },
+      logtype: {
+        value: "info",
+        required: true
+      },
+      prefix: {
+        value: "/home/airkjh/.node-red/logs/Log-",
+        required: true
+      },
+      datePattern: {
+        value: "YYYY-MM-DD.",
+        required: true
+      }
+    },
+    inputs: 1,
+    outputs: 0,
+    icon: "log.png",
+    align: "right",
+    label: function () {
+      return this.name || "rotate-logger";
+    },
+    oneditprepare: function () {
+      $("#node-input-typed-complete").typedInput({
+        types: ['msg', {
+          value: "full",
+          label: RED._("node-red:debug.msgobj"),
+          hasValue: false
+        }]
+      });
+      if (this.complete === "true" || this.complete === true) {
+        // show complete message object
+        $("#node-input-typed-complete").typedInput('type', 'full');
+      } else {
+        var property = (!this.complete || (this.complete === "false")) ? "payload" : this.complete + "";
+        $("#node-input-typed-complete").typedInput('type', 'msg');
+        $("#node-input-typed-complete").typedInput('value', property);
+      }
+      $("#node-input-typed-complete").on('change', function () {
+        if ($("#node-input-typed-complete").typedInput('type') === 'msg' &&
+          $("#node-input-typed-complete").typedInput('value') === ''
+        ) {
+          $("#node-input-typed-complete").typedInput('value', 'payload');
+        }
+      });
+
+      $("#node-input-logtype").on("change", function () {
+        if ($("#node-input-logtype").val() === 'info') {
+          $("#completerow").show();
+        } else {
+          $("#completerow").hide();
+        }
+      });
+
+    },
+    oneditsave: function () {
+      var type = $("#node-input-typed-complete").typedInput('type');
+      if (type === 'full') {
+        $("#node-input-complete").val("true");
+      } else {
+        $("#node-input-complete").val($("#node-input-typed-complete").typedInput('value'));
+      }
+    }
+  });
+</script>
+
+<script type="text/x-red" data-template-name="rotate-logger">
+    <div class="form-row">
+        <label for="node-input-name" style="width: 28%;"><i class="icon-tag"></i> Name</label>
+        <input type="text" id="node-input-name" placeholder="Name">
+    </div>
+    <div class="form-row">
+        <label for="node-input-prefix" style="width:28%;">Prefix</label>
+        <input type="text" id="node-input-prefix" placeholder="Log-">
+    </div>
+    <div class="form-row">
+        <label for="node-input-datePattern" style="width: 28%;">Date Pattern</label>
+        <input type="text" id="node-input-datePattern" placeholder="YYYY-MM-DD.">
+    </div>
+    <div class="form-row" style="border: 1px solid black; padding: 5px;">
+        <label style="width: 28%;"><i class="fa fa-rocket"></i>Log transports</label>
+
+        <input type="checkbox" id="node-input-console" placeholder="spawn" style="display: inline-block; width: auto; vertical-align: top;">
+        <label for="node-input-console" style="width: 18%;"> Console</label>
+
+        <input type="checkbox" id="node-input-debug" placeholder="spawn" style="display: inline-block; width: auto; vertical-align: top;">
+        <label for="node-input-debug" style="width: 18%;"> Debug</label>
+    </div>
+    <div class="form-row">
+        <label for="node-input-logtype" style="width: 28%;"><i class="fa fa-tasks"></i> Log type</label>
+        <select id="node-input-logtype">
+			<option value="info">Info logs</option>
+			<option value="warn">Warn logs</option>
+            <option value="error">Error logs</option>
+		</select>
+    </div>
+    <div class="form-row" id="completerow">
+        <label for="node-input-typed-complete" style="width: 28%;"><i class="fa fa-clone"></i> Info log output</label>
+        <input id="node-input-typed-complete" type="text">
+        <input id="node-input-complete" type="hidden">
+    </div>
+</script>
+
+<script type="text/x-red" data-help-name="rotate-logger">
+    <p>A simple node that converts the message payloads into all lower-case characters</p>
+    <p>This node is forked from node-red-contrib-advance-logger</p>
+</script>
