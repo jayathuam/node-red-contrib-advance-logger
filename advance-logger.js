@@ -8,7 +8,7 @@ module.exports = function (RED) {
         winston.handleExceptions(new winston.transports.File({ filename: 'exceptions.log' }));
         RED.nodes.createNode(this, config);
         var node = this;
-        var filesize = 1073741824;
+        var filesize = 1048576;
         var maxfiles = 1;
         var archive = false;
         var logType = config.logtype;
@@ -19,7 +19,7 @@ module.exports = function (RED) {
         var logger = null;        
 
         if (config.maxsize >= 1) {
-            filesize = config.maxsize * 1073741824;
+            filesize = config.maxsize * 1048576;
         }
         if (config.maxFiles >= 1) {
             maxfiles = config.maxFiles;
